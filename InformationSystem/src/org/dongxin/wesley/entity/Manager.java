@@ -10,10 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * @see 管理员信息
- * @author 罗华强
- * @version 1.0
- * @date 2013-12-11
+ * @author 	：罗华强
+ * email 	：1360042977@qq.com
+ * fileName	: Manager.java
+ * 日期		：2013-12-11
+ * 详细注释	：TODO
+ *
  */
 
 @Entity
