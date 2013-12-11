@@ -1,5 +1,5 @@
 package org.dongxin.wesley.dao;
 
-public class UserDao {
+public interface UserDao {
 
 }

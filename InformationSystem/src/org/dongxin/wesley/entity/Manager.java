@@ -1,6 +1,7 @@
 package org.dongxin.wesley.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * @author 	：罗华强
@@ -32,6 +35,7 @@ public class Manager implements Serializable {
 	private char gender; // 性别	  0表示女，1表示男
 	private Integer age; // 年龄
 	private String password; // 密码
+	private Date birthday;	// 出生日期
 	private String telephone; // 电话号码
 	private String address; // 家庭住址
 	private String email; // 邮箱
@@ -127,6 +131,16 @@ public class Manager implements Serializable {
 
 	public void setRole(char role) {
 		this.role = role;
+	}
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="birthday",length=1,nullable=false,unique=false,insertable=true,updatable=true)
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 
 }
