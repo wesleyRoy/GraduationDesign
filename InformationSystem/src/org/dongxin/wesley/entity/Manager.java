@@ -27,15 +27,15 @@ public class Manager implements Serializable {
 	 */
 	private static final long serialVersionUID = -323678323106359724L;
 	private Integer id; // 自增编号
-	private String userId; // 用户编号
+	private String account; // 用户编号
 	private String username; // 用户名称
-	private char gender; // 性别 0表示女，1表示男
+	private char gender; // 性别	  0表示女，1表示男
 	private Integer age; // 年龄
 	private String password; // 密码
 	private String telephone; // 电话号码
 	private String address; // 家庭住址
 	private String email; // 邮箱
-	private char role; // 级别
+	private char role; // 级别	0表示普通用户，1表示管理员
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -48,13 +48,13 @@ public class Manager implements Serializable {
 		this.id = id;
 	}
 
-	@Column(name="userId",length=12,nullable=false,unique=true,insertable=true,updatable=true)
-	public String getUserId() {
-		return userId;
+	@Column(name="account",length=12,nullable=false,unique=true,insertable=true,updatable=true)
+	public String getAccount() {
+		return account;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setAccount(String account) {
+		this.account = account;
 	}
 
 	@Column(name="username",length=20,nullable=false,unique=true,insertable=true,updatable=true)
