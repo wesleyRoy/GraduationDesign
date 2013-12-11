@@ -54,7 +54,7 @@ public class StringUtil {
 	 * @param integer	传入的整型
 	 * @return	返回字符串
 	 */
-	public static String integerToString(Integer integer) {
+	public static String integerToStr(Integer integer) {
 		return String.valueOf(integer);
 	}
 	
@@ -63,7 +63,7 @@ public class StringUtil {
 	 * @param c		传入的字符
 	 * @return	返回字符
 	 */
-	public static String charToString(char c) {
+	public static String charToStr(char c) {
 		return String.valueOf(c);
 	}
 	
@@ -72,7 +72,7 @@ public class StringUtil {
 	 * @param d	传入的双精度
 	 * @return	返回字符
 	 */
-	public static String doubleToString(double d) {
+	public static String doubleToStr(double d) {
 		return String.valueOf(d);
 	}
 	
@@ -81,7 +81,7 @@ public class StringUtil {
 	 * @param date	传入的时间
 	 * @return	返回字符串
 	 */
-	public static String dateToString(Date date) {
+	public static String dateToStr(Date date) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String time = sdf.format(date);
 		return time;
@@ -92,7 +92,7 @@ public class StringUtil {
 	 * @param str	传入的字符串
 	 * @return	返回日期
 	 */
-	public static Date stringToDate(String str) {
+	public static Date strToDate(String str) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date date = null;
 		try {
