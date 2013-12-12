@@ -126,4 +126,21 @@ public class LoginAction extends ActionSupport {
 		session.remove("role");		// 将权限从Session会话中删除
 		return SUCCESS;
 	}
+
+	/**
+	 * 验证器
+	 */
+	@Override
+	public void validate() {
+		if (account == null || account.length() == 0 || "".equals(account)) {
+			this.addFieldError("account", "账号不能为空");
+		}
+		if (password == null || password.length() == 0 || "".equals(password)) {
+			this.addFieldError("password", "密码不能为空");
+		}
+		if (captcha == null || captcha.length() == 0 || "".equals(captcha)) {
+			this.addFieldError("captcha", "验证码不能为空");
+		}
+	}
+	
 }
