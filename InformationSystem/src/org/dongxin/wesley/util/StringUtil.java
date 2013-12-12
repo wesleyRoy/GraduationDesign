@@ -14,6 +14,13 @@ import java.util.Date;
  * 
  */
 public class StringUtil {
+	
+	/**
+	 * 构造方法私有化
+	 */
+	private StringUtil() {
+		
+	}
 
 	/**
 	 * 将传入的对象转换为字符串
