@@ -17,7 +17,7 @@ import javax.persistence.TemporalType;
  * email 	：1360042977@qq.com
  * fileName	: SendMail.java
  * 日期		：2013-12-11
- * 详细注释	：TODO
+ * 详细注释	：发送邮件信息
  *
  */
 

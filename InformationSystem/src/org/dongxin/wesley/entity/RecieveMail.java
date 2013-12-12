@@ -17,7 +17,7 @@ import javax.persistence.TemporalType;
  * email 	：1360042977@qq.com
  * fileName	: RecieveMail.java
  * 日期		：2013-12-11
- * 详细注释	：TODO
+ * 详细注释	：接收邮件信息
  *
  */
 
