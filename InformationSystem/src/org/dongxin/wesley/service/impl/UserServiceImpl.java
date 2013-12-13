@@ -57,4 +57,9 @@ public class UserServiceImpl implements UserService {
 		return null;
 	}
 
+	@Override
+	public List<Manager> getByCondition(Manager manager) {
+		return userDao.getByCondition(manager);
+	}
+
 }

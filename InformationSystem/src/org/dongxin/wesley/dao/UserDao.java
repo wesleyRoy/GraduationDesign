@@ -55,4 +55,11 @@ public interface UserDao {
 	 * @return	返回管理员对象
 	 */
 	public Manager getManagerByAccount(String account);
+	
+	/**
+	 * 通过组合查询条件获得管理员信息
+	 * @param manager	管理员对象
+	 * @return	返回管理员信息集合
+	 */
+	public List<Manager> getByCondition(Manager manager);
 }

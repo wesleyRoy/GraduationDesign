@@ -6,6 +6,8 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Actions;
+import org.apache.struts2.convention.annotation.InterceptorRef;
+import org.apache.struts2.convention.annotation.InterceptorRefs;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.Result;
 import org.dongxin.wesley.entity.Manager;
@@ -31,6 +33,8 @@ import com.opensymphony.xwork2.ActionSupport;
 @Component("loginAction")
 @Namespace("")
 @Scope("prototype")
+@InterceptorRefs({ @InterceptorRef("tokenSession"),
+		@InterceptorRef("defaultStack") })
 public class LoginAction extends ActionSupport {
 
 	/**

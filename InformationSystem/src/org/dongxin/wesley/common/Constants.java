@@ -24,4 +24,10 @@ public class Constants {
 	public static final int TYPE_QUERY = 5;	// 查询操作
 	public static final int TYPE_SEND_MAIL_PERSONAL = 0;	// 单独发送邮件
 	public static final int TYPE_SEND_MAIL_TOGETHOR = 1;	// 群发邮件
+	public static final int Type_PRIMARY = 0;	// 小学学历
+	public static final int TYPE_HIGH = 1;		// 中学学历
+	public static final int TYPE_SENIOR = 2;	// 高中学历
+	public static final int TYPE_UNIVERSITY = 3;	// 大学学历
+	public static final int TYPE_RESEACHER = 4;		// 研究生学历
+	public static final int TYPE_DOCTOR = 5;	// 博士学历
 }

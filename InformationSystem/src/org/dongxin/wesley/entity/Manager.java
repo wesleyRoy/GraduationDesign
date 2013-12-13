@@ -32,14 +32,14 @@ public class Manager implements Serializable {
 	private Integer id; // 自增编号
 	private String account; // 用户编号
 	private String username; // 用户名称
-	private char gender; // 性别	  0表示女，1表示男
+	private String gender; // 性别	  0表示女，1表示男
 	private Integer age; // 年龄
 	private String password; // 密码
 	private Date birthday;	// 出生日期
 	private String telephone; // 电话号码
 	private String address; // 家庭住址
 	private String email; // 邮箱
-	private char role; // 级别	0表示普通用户，1表示管理员
+	private String role; // 级别	0表示普通用户，1表示管理员
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -71,11 +71,11 @@ public class Manager implements Serializable {
 	}
 
 	@Column(name="gender",length=1,nullable=false,unique=false,insertable=true,updatable=true)
-	public char getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(char gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
@@ -125,11 +125,11 @@ public class Manager implements Serializable {
 	}
 
 	@Column(name="role",length=1,nullable=false,unique=false,insertable=true,updatable=true)
-	public char getRole() {
+	public String getRole() {
 		return role;
 	}
 
-	public void setRole(char role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 

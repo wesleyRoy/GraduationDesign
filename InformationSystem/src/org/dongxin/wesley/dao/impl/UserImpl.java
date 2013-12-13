@@ -4,6 +4,11 @@ import java.util.List;
 
 import org.dongxin.wesley.dao.UserDao;
 import org.dongxin.wesley.entity.Manager;
+import org.dongxin.wesley.query.ManagerQuery;
+import org.dongxin.wesley.util.Hibernate;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  * @author 	£ºÂÞ»ªÇ¿
@@ -44,6 +49,27 @@ public class UserImpl implements UserDao {
 	@Override
 	public Manager getManagerByAccount(String account) {
 		return null;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Manager> getByCondition(Manager manager) {
+		String hql = "from Manager where 1=1"+ManagerQuery.generateQuery(manager) + " order by id";
+		List<Manager> list = null;
+		Session session = Hibernate.getSession();
+		Transaction tx = session.beginTransaction();
+		try {
+			Query query = session.createQuery(hql);
+			ManagerQuery.prepareQuery(manager, query);
+			list = query.list();
+			tx.commit();
+		} catch (Exception e) {
+			tx.rollback();
+			e.printStackTrace();
+		} finally {
+			Hibernate.closeSession();
+		}
+		return list;
 	}
 
 }
