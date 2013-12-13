@@ -75,7 +75,7 @@
 
 	<!-- 配置切入点 -->
 	<aop:config>
-		<aop:pointcut expression="execution(public *org.dongxin.wesley..*.*(..))"
+		<aop:pointcut expression="execution(public * com.dongxin.wesley.*.service.impl..*.*(..))"
 			id="pointCut" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointCut" />
 	</aop:config>
