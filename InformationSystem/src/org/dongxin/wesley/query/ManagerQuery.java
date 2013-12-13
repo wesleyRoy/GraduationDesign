@@ -22,12 +22,12 @@ public class ManagerQuery {
 		StringBuffer buffer = new StringBuffer();
 		// 用户是否使用账号作为查询条件
 		if (manager.getAccount() != null || manager.getAccount().trim().length() != 0) {
-			buffer.append(" and account=?");
+			buffer.append(" and account like ?");
 		}
 		
 		// 用户是否使用用户名作为查询条件
 		if (manager.getUsername() != null || manager.getUsername().trim().length() != 0) {
-			buffer.append(" and username=?");
+			buffer.append(" and username like ?");
 		}
 		
 		// 用户是否使用性别作为查询条件
@@ -37,7 +37,7 @@ public class ManagerQuery {
 		
 		// 用户是否使用出生日期作为查询条件
 		if (manager.getBirthday() != null) {
-			buffer.append(" and birthday=?");
+			buffer.append(" and birthday like ?");
 		}
 		
 		// 用户是否使用年龄最小值作为查询条件
